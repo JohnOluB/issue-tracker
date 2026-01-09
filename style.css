@@ -50,6 +50,31 @@
 
 .hero-section {
     display: flex;
-    gap: 180px;
+    gap: 50px;
     margin-bottom: 20px;
+}
+
+.form-box label {
+    margin-right: 10px;
+}
+
+
+.status-box,
+.search-box,
+.priority-box {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
+    outline: none;
+    border-radius: 5px;
+    padding: 6px;
+    margin-top: 4px;
+    border: 1px solid var(--border-color);
+    width: 250px;
+
+}
+
+.select-container {
+    display: flex;
+    gap: 40px;
 }

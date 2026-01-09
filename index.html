@@ -20,20 +20,25 @@
                     <label class="label-title" for="search-box">Search</label><input type="text" class="search-box" id="search-box" placeholder="Search by title" required />
                 </form>
                 <div class="select-container">
-                    <label class="label-title" for="status-box">Status</label>
-                    <select class="status-box" id="status-box">
-                        <option value="">All</option>
-                        <option value="open">Open</option>
-                        <option value="closed">Closed</option>
-                    </select>
+                    <div class="status">
+                        <label class="label-title" for="status-box">Status</label>
+                        <select class="status-box" id="status-box">
+                            <option value="">All</option>
+                            <option value="open">Open</option>
+                            <option value="closed">Closed</option>
+                        </select>
+                    </div>
 
-                    <label class="label-title" for="priority-box">Priority</label>
-                    <select class="priority-box" id="priority-box">
-                        <option value="">All</option>
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
-                    </select>
+                    <div class="priority">
+                        <label class="label-title" for="priority-box">Priority</label>
+                        <select class="priority-box" id="priority-box">
+                            <option value="">All</option>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+
                 </div>
 
                 <button type="button" id="open-modal-button" class="btn">
