@@ -46,17 +46,10 @@ const defaultIssues = [{
         description: "Change the primary colors to match the new brand guidelines.",
         priority: "medium",
         status: "open"
-    },
-    {
-        id: 3,
-        title: "Add Search Functionality",
-        description: "Allow users to search for issues by title.",
-        priority: "low",
-        status: "closed"
     }
 ];
 
-// Initialize issues: Check localStorage first, otherwise use defaultIssues
+
 let issues = JSON.parse(localStorage.getItem('issues'));
 if (!issues || issues.length === 0) {
     issues = defaultIssues;
