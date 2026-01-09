@@ -125,3 +125,16 @@
     color: var(--text-color);
     font-weight: bold;
 }
+
+.title input,
+.description textarea,
+.priority select {
+    width: 800px;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
