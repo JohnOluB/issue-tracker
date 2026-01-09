@@ -28,13 +28,11 @@ function closeModal() {
     issueForm.reset();
 }
 
-
 createIssueBtn.addEventListener('click', openModal);
 
 cancelBtn.addEventListener('click', closeModal);
 
 
-// Initialize issues from localStorage or use default in-memory array
 const defaultIssues = [{
         id: 1,
         title: "Fix Navigation Bar",
@@ -58,9 +56,12 @@ const defaultIssues = [{
     }
 ];
 
-let issues = JSON.parse(localStorage.getItem('issues')) || defaultIssues;
+// Initialize issues: Check localStorage first, otherwise use defaultIssues
+let issues = JSON.parse(localStorage.getItem('issues'));
+if (!issues || issues.length === 0) {
+    issues = defaultIssues;
+}
 
-// Display issues on load
 displayIssues();
 
 function createIssueCard(issue) {
@@ -95,6 +96,7 @@ function displayIssues() {
     }
 }
 
+
 issueForm.addEventListener('submit', function(event) {
 
     event.preventDefault();
@@ -113,10 +115,67 @@ issueForm.addEventListener('submit', function(event) {
 
     issues.unshift(newIssue);
 
-    // Save to localStorage
     localStorage.setItem('issues', JSON.stringify(issues));
 
     displayIssues();
 
     closeModal();
 });
+
+const searchBox = document.querySelector("#search-box");
+const statusBox = document.querySelector("#status-box");
+const priorityBox = document.querySelector("#priority-box");
+
+
+function filterIssues() {
+
+    const searchText = searchBox.value.toLowerCase();
+    const selectedStatus = statusBox.value;
+    const selectedPriority = priorityBox.value;
+
+
+    let filteredIssues = issues;
+
+    if (searchText !== '') {
+        filteredIssues = filteredIssues.filter(function(issue) {
+            const titleMatch = issue.title.toLowerCase().includes(searchText);
+            const descMatch = issue.description.toLowerCase().includes(searchText);
+            return titleMatch || descMatch;
+        });
+    }
+
+    if (selectedStatus !== '') {
+        filteredIssues = filteredIssues.filter(function(issue) {
+            return issue.status === selectedStatus;
+        });
+    }
+
+    if (selectedPriority !== '') {
+        filteredIssues = filteredIssues.filter(function(issue) {
+            return issue.priority === selectedPriority;
+        });
+    }
+
+    displayFilteredIssues(filteredIssues);
+}
+
+function displayFilteredIssues(filteredIssues) {
+    const issuesList = document.querySelector("#issues-list");
+    issuesList.innerHTML = '';
+
+    if (filteredIssues.length === 0) {
+        issuesList.innerHTML = '<p>No matching issues found.</p>';
+        return;
+    }
+
+    for (let i = 0; i < filteredIssues.length; i++) {
+        const card = createIssueCard(filteredIssues[i]);
+        issuesList.appendChild(card);
+    }
+}
+
+searchBox.addEventListener('input', filterIssues);
+statusBox.addEventListener('change', filterIssues);
+priorityBox.addEventListener('change', filterIssues);
+
+displayIssues();

@@ -229,7 +229,6 @@ body.dark-theme,
 }
 
 #issues-list p {
-    text-align: center;
     color: var(--text-color);
     font-size: 16px;
     margin-top: 40px;
