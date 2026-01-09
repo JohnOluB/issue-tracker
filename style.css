@@ -232,3 +232,44 @@ body.dark-theme,
     font-size: 16px;
     margin-top: 40px;
 }
+
+@media (max-width: 768px) {
+    .main-container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+
+    }
+
+    .hero-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .select-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .status-box,
+    .search-box,
+    .priority-box,
+    .btn {
+        width: 100%;
+    }
+
+    .title input,
+    .description textarea,
+    .priority select {
+        width: 100%;
+    }
+
+    .btn-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
