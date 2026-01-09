@@ -107,3 +107,21 @@
     flex-direction: column;
     gap: 15px;
 }
+
+.title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    color: var(--text-color);
+}
+
+.title label {
+    margin-bottom: 5px;
+}
+
+.title label,
+.description label,
+.priority label {
+    color: var(--text-color);
+    font-weight: bold;
+}
