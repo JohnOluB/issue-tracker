@@ -138,3 +138,9 @@
     background-color: var(--background-color);
     color: var(--text-color);
 }
+
+.description {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
