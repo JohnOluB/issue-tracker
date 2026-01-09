@@ -83,3 +83,12 @@
     display: flex;
     gap: 40px;
 }
+
+.btn {
+    height: 26px;
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--text-color);
+    color: var(--background-color);
+}
