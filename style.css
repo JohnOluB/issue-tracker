@@ -40,12 +40,16 @@
     width: 100%;
     padding: 15px 0;
     margin-bottom: 20px;
+    gap: 620px;
 }
 
 .header p {
     font-size: 24px;
     font-weight: bold;
-    margin-right: 700px;
 }
 
-.hero-section {}
+.hero-section {
+    display: flex;
+    gap: 180px;
+    margin-bottom: 20px;
+}
