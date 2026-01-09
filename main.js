@@ -140,7 +140,7 @@ function filterIssues() {
         filteredIssues = filteredIssues.filter(function(issue) {
             const titleMatch = issue.title.toLowerCase().includes(searchText);
             const descMatch = issue.description.toLowerCase().includes(searchText);
-            return titleMatch || descMatch;
+            return titleMatch;
         });
     }
 
