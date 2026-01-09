@@ -32,28 +32,7 @@ createIssueBtn.addEventListener('click', openModal);
 
 cancelBtn.addEventListener('click', closeModal);
 
-
-const defaultIssues = [{
-        id: 1,
-        title: "Fix Navigation Bar",
-        description: "The navigation bar is not responsive on mobile devices.",
-        priority: "high",
-        status: "open"
-    },
-    {
-        id: 2,
-        title: "Update Color Scheme",
-        description: "Change the primary colors to match the new brand guidelines.",
-        priority: "medium",
-        status: "open"
-    }
-];
-
-
-let issues = JSON.parse(localStorage.getItem('issues'));
-if (!issues || issues.length === 0) {
-    issues = defaultIssues;
-}
+let issues = JSON.parse(localStorage.getItem('issues')) || [];
 
 displayIssues();
 
