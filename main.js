@@ -14,7 +14,21 @@ function changeTheme() {
 themeBtn.addEventListener('click', changeTheme);
 
 
-const openModalBtn = document.querySelector("#open-modal-button");
+const createIssueBtn = document.querySelector("#createIssue-button");
 const newIssueSection = document.querySelector(".new-issue");
 const cancelBtn = document.querySelector("#cancel-button");
 const issueForm = document.querySelector("#issue-form");
+
+function openModal() {
+    newIssueSection.classList.add('active');
+}
+
+function closeModal() {
+    newIssueSection.classList.remove('active');
+    issueForm.reset();
+}
+
+
+createIssueBtn.addEventListener('click', openModal);
+
+cancelBtn.addEventListener('click', closeModal);

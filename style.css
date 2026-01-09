@@ -104,10 +104,14 @@ body.dark-theme,
 }
 
 .new-issue {
-    /* display: none; */
+    display: none;
     flex-direction: column;
     width: 100%;
     margin-bottom: 20px;
+}
+
+.new-issue.active {
+    display: flex;
 }
 
 .new-issue-box {
