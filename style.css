@@ -71,7 +71,12 @@
     margin-top: 4px;
     border: 1px solid var(--border-color);
     width: 250px;
+}
 
+.label-title {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--text-color);
 }
 
 .select-container {
