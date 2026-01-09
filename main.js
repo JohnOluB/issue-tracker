@@ -12,3 +12,9 @@ function changeTheme() {
     }
 }
 themeBtn.addEventListener('click', changeTheme);
+
+
+const openModalBtn = document.querySelector("#open-modal-button");
+const newIssueSection = document.querySelector(".new-issue");
+const cancelBtn = document.querySelector("#cancel-button");
+const issueForm = document.querySelector("#issue-form");
