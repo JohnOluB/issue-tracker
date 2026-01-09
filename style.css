@@ -94,3 +94,16 @@
     font-size: 13px;
     cursor: pointer
 }
+
+.new-issue {
+    /* display: none; */
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.new-issue-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
