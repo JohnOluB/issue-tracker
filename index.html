@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div class="main-container">
         <div class="conatiner-one">
@@ -12,18 +14,33 @@
                 <p>Mini Issue Tracker</p>
                 <button class="btn" id="theme-button">Dark Mode</button>
             </div>
-                    <div class="hero-section">
-          <form class="form-box">
-            <label class="label-title" for="search-box">Search</label
-            ><input
-              type="text"
-              class="search-box"
-              id="search-box"
-              placeholder="Search by title"
-              required
-            />
-          </form>
+            <div class="hero-section">
+                <form class="form-box">
+                    <label class="label-title" for="search-box">Search</label><input type="text" class="search-box" id="search-box" placeholder="Search by title" required />
+                </form>
+                <div class="select-container">
+                    <label class="label-title" for="status-box">Status</label>
+                    <select class="status-box" id="status-box">
+                        <option value="">All</option>
+                        <option value="open">Open</option>
+                        <option value="closed">Closed</option>
+                    </select>
+
+                    <label class="label-title" for="priority-box">Priority</label>
+                    <select class="priority-box" id="priority-box">
+                        <option value="">All</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <button type="button" id="open-modal-button" class="btn">
+                    + Create Issue
+                </button>
+            </div>
+            <div class="new-issue"></div>
         </div>
-    </div>
 </body>
+
 </html>
